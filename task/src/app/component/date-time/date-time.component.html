@@ -1,0 +1,36 @@
+<div class="container-fluid mt-3 row">
+  <div class="col-12 col-md-6">
+<div class="card p-3">
+  <p >Today is <strong>{{today | date:"MMM dd, yyyy 'at' hh:mm a"}}</strong></p>
+  <p>Full date, <strong>{{today | date:'fullDate'}}</strong></p>
+  <p>The time is <strong>{{today | date:'h:mm a '}}</strong></p>
+  
+<div class="clock">  
+<p>{{ today | date: 'hh:mm:ss a' }}</p>
+</div>
+</div>
+  </div> 
+
+
+  <div class="col-12 col-md-6">
+  <div class="card p-3">
+    <select (change)="changeTime($event)" class="form-select">
+      <option selected>select..</option>
+      <option value="America">America</option>
+      <option value="India">India</option>
+      <option value="UK">Uk</option>
+      <option value="Australia">Australia</option>
+    </select>
+
+ <div class="m-5">
+  <p><strong>Time:</strong> {{ Time }}</p>
+  <p><strong>Date:</strong> {{ Date }}</p>
+
+ </div>
+  </div>
+  </div>
+
+
+</div>
+
+
